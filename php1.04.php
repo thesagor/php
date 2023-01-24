@@ -2,6 +2,7 @@
 $ami= 'sagor';
 $pi=3;
 $result=true;
+$salary= 2000;
 var_dump($result);
 
 /*
@@ -14,4 +15,4 @@ var_dump($result);
  //echo "$result";
 // work with printf
 
-printf(" %s the student of class %s. He can't obtained number %s in his life", strtoupper($ami), $pi, $result);
+printf(" %s the student of class %d. He can't obtained number %s in his life. His salary is $%.2f", strtoupper($ami), $pi, $result, $salary);
