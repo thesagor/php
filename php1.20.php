@@ -23,3 +23,4 @@ endif;
         echo " This is ODD number by switch case";
         break;
         endswitch;
+    //end switch case
