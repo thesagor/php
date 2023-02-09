@@ -1,7 +1,8 @@
 <?php
 //print 10 to 0
-$n=6;
-for($i=$n, $factorial=1; $i>1;$i--){
-    $factorial= ($factorial*$i);
+$num=10;
+for($i=$num,$factorial=1;$i>0;$i--){
+    $factorial*=$i;
 }
-echo $factorial;
+printf("This is the number %d and factorial is %d", $num,$factorial);
+
