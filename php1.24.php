@@ -1,8 +1,6 @@
 <?php
-//print 10 to 0
-$num=10;
-for($i=$num,$factorial=1;$i>0;$i--){
-    $factorial*=$i;
+$n=5;
+for($i=$n, $fact=1; $i>1; $i--){
+   $fact*= $i;
 }
-printf("This is the number %d and factorial is %d", $num,$factorial);
-
+printf("Tis is %d is %d", $n, $fact);
