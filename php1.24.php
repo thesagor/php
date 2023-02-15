@@ -1,7 +1,8 @@
 <?php
-   $num=5;
-   for($i=1,$fac=1; $i<=$num;$i++){
-      $fac=$fac*$i;
+   $num= 10;
+   for ($i=1,$rs=1; $i<=$num; $i++){
+      $rs*=$i;
+      echo "The number of $i factorial is $rs \n";
    }
+
    
-   printf("This is the main number is %d and factorial %d", $num,$fac);
