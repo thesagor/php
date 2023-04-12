@@ -1,18 +1,29 @@
 <?php
  
-//operand operator
-
-$x=3;
-$y=4;
-
-$result=$x<=>$y;
+//Null coelsing operator
+$value= null;
+$valueDefault= "Default value mane set koranai";
 
 
-    if($result==1){
-        echo "$x is greater than $y";
-    }elseif($result==0){
-        echo " $x is equal $y";
-    }
-    elseif($result==-1){
-        echo "$x is smaller than $y";
-    }
+//simple way////
+if(isset($value)){
+    echo "Value is Null";
+}else{
+    echo "This is default value mane set koranai";
+}
+
+
+echo PHP_EOL;
+//Ternary Operator
+$result= $value? "value is null": "This is default value mane set kora nai";
+echo $result;
+
+
+echo PHP_EOL;
+//coelesing operator
+ $cresult= $value?? $valueDefault;
+ echo $cresult;
+
+
+
+
