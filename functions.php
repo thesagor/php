@@ -1,18 +1,15 @@
 <?php
 
-//creating function working value
+//creating  factorial number of tfounded number by function
 
-function checktoEven($n)
-{ //$n is peramater and checktoEven is function name \n
-    echo PHP_EOL;
-    if($n%2==0){
-        return true;
-
-    }
-    else{
-        return false;
+function ffactorial($n){
+    if($n<=1){
+        return 1;
+    }else{
+        return $n*ffactorial($n-1);
     }
 }
+
 
 
 
