@@ -2,7 +2,7 @@
 
 //creating  factorial number of tfounded number by function
 
-function ffactorial($n){
+function ffactorial(int $n){
     if($n<=1){
         return 1;
     }else{
