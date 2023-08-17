@@ -1,10 +1,10 @@
 //task of darun it
 <?php
-    $a=25;
-    $b='25';
-    if($a===$b){
-        echo " Both are same";
+    $abul=25;
+    $babu=30;
+    if($abul!=$babu){
+        echo " They obey each other";
     }else{
-        echo " They are not same";
-        //var_dump($b);
+        echo " They will not obey each person";
+        //nb var_dump($babu);
     }
