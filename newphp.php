@@ -1,10 +1,18 @@
 //task of darun it
 <?php
-    $abul=25;
-    $babu=30;
-    if($abul!=$babu){
-        echo " They obey each other";
-    }else{
-        echo " They will not obey each person";
-        //nb var_dump($babu);
+    $a=10;
+    $b=8;
+    $c=5;
+    if($a>$b){
+        if($a>$c){
+            echo "A is greater number";
+        }elseif($b>$a){
+            if($b>$c){
+                echo " B is the greater number";
+            }
+        }
+        
+        else{
+            echo "C is the greater number";
+        }
     }
