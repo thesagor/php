@@ -1,11 +1,10 @@
 <?php
-//Darun iT PHP course
+// Darun iT PHP course
 // find out the even number with do while loop
 
-$a=0;
-do{
-    if($a%2==0){
-        echo "$a\n";
-    }
-    $a++;
-}while($a<=1000);
+$arra=["bhangura", "chatmohor", "faridpur", "ishwardy", "tebunia", "sathia", "ataikula", "sodor", "haramon", "rajshahi", "Pabna"];
+
+
+foreach($arra as $city){
+    echo "$city\n";
+}
