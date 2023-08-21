@@ -1,24 +1,27 @@
 <?php
-    
-    if(isset($_POST['btn']));
-    $name=$_POST['name'];
-    $user=$_POST['user'];
-    $mail=$_POST['mail'];
-    $pass=$_POST['pass'];
-    $number=$_POST['number'];
-    $car=$_POST['car'];
+if(isset($_POST['btn']));
+$name= $_POST['name'];
+$user= $_POST['user'];
+$email= $_POST['email'];
+$pass= $_POST['pass'];
+$number= $_POST['number'];
 
-    ?>
+?>
 
-    <h1>Form details</h1> <hr>
-    <ul class="details">
-        <h4>Name: <?php echo "$name\n"; ?> </h4>
-        <h4>Name: <?php echo "$user\n"; ?> </h4>
-        <h4>Name: <?php echo "$mail\n"; ?> </h4>
-        <h4>Name: <?php echo "$pass\n"; ?> </h4>
-        <h4>Name: <?php echo "$number\n"; ?> </h4>
-        <h4>Name: <?php echo "$car"; ?> </h4>
-    </ul>
-    
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIO</title>
+</head>
+<body>
+    <div class="formdetails">
+        <h4>Full name: <?php echo "$name" ?> </h4>
+        <h4>user name: <?php echo "$user" ?> </h4>
+        <h4>email: <?php echo "$email" ?> </h4>
+        <h4>password: <?php echo "$pass" ?> </h4>
+        <h4>number: <?php echo "$number" ?> </h4>
+    </div>
+</body>
+</html>

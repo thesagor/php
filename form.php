@@ -7,21 +7,15 @@
 </head>
 <body>
     <form action="bio.php" method="POST">
-        <h4>Form for submission</h4>
-        <input type="text" name="name" placeholder="Full Name">
-        <input type="text" name="user" placeholder="User Name">
-        <input type="email" name="mail" placeholder="User Email">
-        <input type="password" name="pass" placeholder="User Password">
-        <input type="number" name="number" placeholder="User Number">
-        <label for="cars">Choose a car:</label>
-        <select id="cars" name="car">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-        </select>
-        <input type="submit" name="btn">
-
+        <div class="myform">
+            <input type="text" name="name" placeholder="Full Name">
+            <input type="text" name="user" placeholder="User Name">
+            <input type="checkbox" name="gender" id="gndr" value="male" value="female">
+            <input type="email" name="mail" id="" placeholder="User mail">
+            <input type="password" name="pass" id="">
+            <input type="number" name="number" id="">
+            <input type="submit" value="Submit" name="btn">
+        </div>
     </form>
 </body>
 </html>
