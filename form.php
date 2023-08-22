@@ -10,7 +10,6 @@
         <div class="myform">
             <input type="text" name="name" placeholder="Full Name">
             <input type="text" name="user" placeholder="User Name">
-            <input type="checkbox" name="gender" id="gndr" value="male" value="female">
             <input type="email" name="mail" id="" placeholder="User mail">
             <input type="password" name="pass" id="">
             <input type="number" name="number" id="">
