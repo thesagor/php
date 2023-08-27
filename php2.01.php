@@ -1,8 +1,9 @@
 <?php 
 
-include_once "functions.php";
-
-    //functional code using 
-    $x=5;
-
-    printf('the factorial of is num '. ffactorial($x));
+include_once "func.php";
+$n=25;
+if(isEven($n)){
+    echo " hey This is jor number";
+}else{
+    echo " Hey this is not jor orthat bejor number";
+}
