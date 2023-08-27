@@ -1,8 +1,8 @@
 <?php
 
-function isEven($x){
-    if($x%2==0){
-        return true;
-    }
-    return false;
+function fact($n){
+    for ($i=$n,$fact=1; $i >1 ; $i--) { 
+        $fact=$fact*$i;     
+    }     
+    return $fact; 
 }
