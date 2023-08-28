@@ -1,5 +1,8 @@
 <?php
 
-function qstn($first="Hi i masagor",$second=" Hi nice to meet with you"){
-    printf("First question is; {$first} Second question is {$second}");
+function sum(int $x, int $y):int {
+    return $x+$y;
+
 }
+
+echo sum(20,20);
