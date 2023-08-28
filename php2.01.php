@@ -1,4 +1,5 @@
 <?php 
 
 include_once "func.php";
-echo fact(6);
+
+qstn("This is unkown", " This is shefali");
