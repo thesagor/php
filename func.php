@@ -1,8 +1,16 @@
 <?php
+//Unlimited parameter
 
-function sum(int $x, int $y):int {
-    return $x+$y;
+function math( int ...$n):int {
+    
+    for($i=0,$result=0; $i<count($n); $i++){
+        $result+=$n[$i];
+    }
+    return $result;
+
+    
+
 
 }
 
-echo sum(20,20);
+echo math(20,30,30);
