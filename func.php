@@ -1,18 +1,18 @@
 <?php
-// Recursive function 
+// Recursive function first and last number showing with recursion function
 
 
-function Rec(int $i){
+function Rec(int $first, $last){
 
-    if($i>=10){
-        return;
+    if($first>=$last){
+        return 'invalid';
     }
-    echo $i. "\n";
-    $i++;
-    Rec($i);
+    echo $first. "\n";
+    $first++;
+    Rec($first, $last);
     
 }
 
-echo Rec(1);
+echo Rec(10,20);
 
 
