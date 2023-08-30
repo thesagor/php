@@ -1,16 +1,38 @@
 <?php
-//Unlimited parameter
+// Add function for specific work
 
-function math($x,$y, int ...$n):int { //this is integer
-    
-    for($i=0,$result=0; $i<count($n); $i++){
-        $result+=$n[$i];
-    }
-    return $result;
+function Fojor(){
+    echo "Fojorer namaz por coding kori\n";
+}
 
-    
+function johor(){
+    echo "zohorer  namaz por ghum o boi pori\n";
+}
 
+function asor(){
+    echo "asorer namaz por bajare jai\n";
 
 }
 
-echo math(20,30,30,50,58,25);
+function magrib(){
+    echo "magrib namaz por again coding kori\n";
+
+}
+
+function esha(){
+    echo "Esha namaz por khaoya daoya ghum \n";
+
+}
+
+
+function allWork(){
+    Fojor();
+    johor();
+    asor();
+    magrib();
+    esha();
+
+}
+
+
+
