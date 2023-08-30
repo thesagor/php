@@ -1,18 +1,16 @@
 <?php
 // Recursive function first and last number showing with recursion function
 
-
-function Rec(int $first, $last){
-
-    if($first>=$last){
-        return 'invalid';
+function factorial(int $n){
+    if($n<=1){
+        return 1;
     }
-    echo $first. "\n";
-    $first++;
-    Rec($first, $last);
-    
+
+    return $n*factorial($n-1);
 }
 
-echo Rec(10,20);
+$show=  factorial(5);
+echo $show;
+
 
 
