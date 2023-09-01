@@ -1,11 +1,9 @@
 <?php
-
-$ami = "Sagor Ahmed";
-function name(){
-    global $ami;
-    echo "Ami $ami";
-}
-name();
-
-
-
+	//simple scope of variable
+	
+	function sayhello(){
+		global $name;
+		$name = "John"; //local scope
+	}
+	sayhello();
+	printf("Hello %s\n", $name);
