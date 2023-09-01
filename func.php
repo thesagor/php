@@ -8,8 +8,16 @@
 
 	$number= count($students);
 
- for($i=0; $i<=$number;$i++){
+	for($i=0; $i<=$number;$i++){
 
-	echo $students[$i]."\n";
+		echo $students[$i]."\n";
 
- }
+	}
+
+	echo "\n";
+
+	for($i=$number-1; $i>=0;$i--){
+
+		echo $students[$i]."\n";
+
+	}
