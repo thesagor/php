@@ -1,23 +1,12 @@
 <?php
-	//Array
-	$students=['john','jane','doe','james','judy'];
-	//echo $students[0];
+	//Array pop
+	 $arr = array("red","green","blue","yellow");							
 
-	// var_dump($students);
-	// echo count($students);
+	array_pop($arr); //remove last element
+	array_push($arr,"Sagor");//add element to the end of the array
+	array_shift($arr); //remove first element	
+	 array_unshift($arr,"Modu"); //add element to the beginning of the array	
 
-	$number= count($students);
 
-	for($i=0; $i<=$number;$i++){
-
-		echo $students[$i]."\n";
-
-	}
-
-	echo "\n";
-
-	for($i=$number-1; $i>=0;$i--){
-
-		echo $students[$i]."\n";
-
-	}
+	 $arr[1]="Dsasrk glue";
+	 print_r($arr);
