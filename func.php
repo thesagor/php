@@ -4,17 +4,12 @@
 		"class 9"=>"St. Joseph, ideal, biggan, motijheel",
 		"class 10"=>"begum badrunnesa, hazrat shah ali mohila, motijheel",
 		"class 8"=>"hamdard,high school,taight school, motijheel",
-		"university"=> "Du, Ru, Buet, Iut, Nsu, Aiub, Brac, East West,"
+		"university"=> "Du, Ru, Buet, Iut, Nsu, Aiub, Brac, East West,",
+		"brack" => "chowbaria,menda,shibpur",
 	];
 
-	// foreach ($schools as $vlo => $value) {
-		
-	// 	echo $vlo.": ".$value."\n";
-		
-	// }
+	$schools["brack"]=$schools["brack"]." modhupur,nagdanga";
 
-	$value=array_values($schools);
-	for($i=0;$i<=count($value);$i++){
-		echo $value[$i];
-		echo "\n";
-	}
+	echo $schools["brack"];
+
+
