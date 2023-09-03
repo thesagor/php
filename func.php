@@ -1,15 +1,13 @@
 <?php
-	//assoiative array
-	$schools=[
-		"class 9"=>"St. Joseph, ideal, biggan, motijheel",
-		"class 10"=>"begum badrunnesa, hazrat shah ali mohila, motijheel",
-		"class 8"=>"hamdard,high school,taight school, motijheel",
-		"university"=> "Du, Ru, Buet, Iut, Nsu, Aiub, Brac, East West,",
-		"brack" => "chowbaria,menda,shibpur",
-	];
+	//Reduce array to a single value by using a callback function
+	$mynum=[1,2,3,4,5,6,7,8,9,10];
+	function sum($oldvalue=0,$newvalue){
+		return $oldvalue+$newvalue;
+	}
 
-	$schools["brack"]=$schools["brack"]." modhupur,nagdanga";
+	$output= array_reduce($mynum,"sum");
+	echo $output;
 
-	echo $schools["brack"];
+	
 
 
