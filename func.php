@@ -1,10 +1,17 @@
 <?php  
-    $vitamins=[
-        'vitaminA'=> explode(', ', 'Alu, moris, jhinga'),
-        'vitaminB'=> explode(', ', 'Ada, Jira, Gul moris'),
-        'vitaminC'=> explode(', ', 'Potol, Dhonia, Cha, Singra')
+
+
+    $names=[
+        'muslims'=>[
+            'men'=>["habib", "kabib", "kabil"],
+            'women'=> ["siuli", "romesa", "risma"]
+        ],
+        'hindu'=>[
+            'men'=>["joy", "sriram"],
+            'women'=>["poli", "joyeta"]
+        ]
     ];
-    print_r($vitamins);
-    array_push($vitamins['vitaminB'],'sukna moris');
-    
-    print_r($vitamins);
+print_r($names);
+echo $names['muslims']['women'][2];
+
+
