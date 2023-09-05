@@ -8,10 +8,12 @@
         ],
         'hindu'=>[
             'men'=>["joy", "sriram"],
-            'women'=>["poli", "joyeta"]
+            'women'=>["poli", "joyeta","sirta"=>[
+                'kirta'=> ["habi", "jani"]
+            ]
         ]
-    ];
-print_r($names);
-echo $names['muslims']['women'][2];
+    ]
+];
+echo $names['hindu']['women']['sirta']['kirta'][1];
 
 
