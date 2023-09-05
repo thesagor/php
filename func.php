@@ -1,12 +1,10 @@
-
-
-<form action="" method="get">
-    <input type="text" name="user">
-    <input type="submit" value="Submit">
-</form>
-
-<?php
-//Null coalescing operator
-$user = $_GET['user'] ?? 'nobody';
-
-echo $user;
+<?php  
+    $vitamins=[
+        'vitaminA'=> explode(', ', 'Alu, moris, jhinga'),
+        'vitaminB'=> explode(', ', 'Ada, Jira, Gul moris'),
+        'vitaminC'=> explode(', ', 'Potol, Dhonia, Cha, Singra')
+    ];
+    print_r($vitamins);
+    array_push($vitamins['vitaminB'],'sukna moris');
+    
+    print_r($vitamins);
