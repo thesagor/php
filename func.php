@@ -1,19 +1,27 @@
 <?php  
+//Array convert into json and serialize
 
-
-    $names=[
-        'muslims'=>[
-            'men'=>["habib", "kabib", "kabil"],
-            'women'=> ["siuli", "romesa", "risma"]
-        ],
-        'hindu'=>[
-            'men'=>["joy", "sriram"],
-            'women'=>["poli", "joyeta","sirta"=>[
-                'kirta'=> ["habi", "jani"]
-            ]
-        ]
-    ]
+$student=[
+    'fname'=> 'jamal',
+    'lname'=> 'vuia',
+    'class'=> 9,
+    'group'=> 'science',
+    'gender' => 'men'
 ];
-echo $names['hindu']['women']['sirta']['kirta'][1];
+
+//print_r($student);
+
+//printf( "This is %s %s",$student['fname'], $student['lname']);
+//$serialized= serialize($student);
+//$uns= unserialize($serialized);
+//print_r($uns);
+
+$json= json_encode($student);
+$dejson= json_decode($json,true);
+//print_r($dejson);
+foreach ($dejson as $key => $value) {
+    echo $key. " = ". $value. "\n";
+}
+
 
 
