@@ -1,27 +1,14 @@
 <?php  
-//Array convert into json and serialize
+//Deep copy or copy by value
 
-$student=[
-    'fname'=> 'jamal',
-    'lname'=> 'vuia',
-    'class'=> 9,
-    'group'=> 'science',
-    'gender' => 'men'
+$names= [
+    "name"=>"Sagor Ahmed",
+    "occupation"=> "Freelancer",
+    "Age"=> 25
 ];
 
-//print_r($student);
+$lal= $names;
+$lal['name']='lal hossain';
 
-//printf( "This is %s %s",$student['fname'], $student['lname']);
-//$serialized= serialize($student);
-//$uns= unserialize($serialized);
-//print_r($uns);
-
-$json= json_encode($student);
-$dejson= json_decode($json,true);
-//print_r($dejson);
-foreach ($dejson as $key => $value) {
-    echo $key. " = ". $value. "\n";
-}
-
-
+print_r($lal);
 
