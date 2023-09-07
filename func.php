@@ -1,14 +1,14 @@
 <?php  
-//Deep copy or copy by value
+//value set or not set or not empty
 
-$names= [
-    "name"=>"Sagor Ahmed",
-    "occupation"=> "Freelancer",
-    "Age"=> 25
-];
+$number='sorhe bekaya';
 
-unset($names['name']);
-print_r($names);
-print_r( array_keys($names));
+if(isset($number) && is_numeric($number) || !empty($number)){
+    echo "Not empty or numeric wchich is $number";
+}else{
+    echo "Not set";
+}
+
+
 
 
