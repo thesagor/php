@@ -7,8 +7,19 @@ $names= [
     "Age"=> 25
 ];
 
-$lal= $names;
-$lal['name']='lal hossain';
+$data= &$names;
 
-print_r($lal);
+
+function inData($data){
+
+    $data['name']= 'Sagor hoosain';
+    print_r($data);
+
+}
+
+
+print_r($names);
+inData($names);
+
+
 
