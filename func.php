@@ -9,17 +9,18 @@ $names= [
 
 $data= &$names;
 
+print_r($data);
 
-function inData($data){
+echo "Shallow copy start from here \n";
 
-    $data['name']= 'Sagor hoosain';
+//copy by refarence or shallow copy
+
+function DaTa($data){
+
+    $data['name'] = 'Lal Hossain';
     print_r($data);
 
 }
-
-
-print_r($names);
-inData($names);
-
+Data($data);
 
 
