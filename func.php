@@ -1,13 +1,12 @@
 <?php  
-//value set or not set or not empty
+//vArray slice
 
-$number='sorhe bekaya';
-
-if(isset($number) && is_numeric($number) || !empty($number)){
-    echo "Not empty or numeric wchich is $number";
-}else{
-    echo "Not set";
-}
+$fruits=['Banana', 'kola', 'bedena', 'angur', 'mango'];
+$sliceFruits= array_slice($fruits,-3,-1,true);
+$sliceFruit= array_slice($fruits,1,3,true);
+print_r($sliceFruits);
+echo "\n";
+print_r($sliceFruit);
 
 
 
