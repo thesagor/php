@@ -10,9 +10,10 @@ $desifruits= ["Mango", "Lemon", "Banana", "Jackfruits", "JADU"];
 $num= [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 function square($n){
-    printf("The square of %d is %d \n", $n, $n*$n*$n);
+    return $n*$n*$n;
 }
 
-$mywalk= array_walk($num,'square');
-echo $mywalk;
+$myarr= array_map('square',$num);
+print_r($myarr);
+print_r($num);
 
