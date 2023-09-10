@@ -7,8 +7,12 @@ $number1= ['a'=>10, 'b'=> 15, 'c'=>122, 'd'=>113];
 $number2= ['d'=>110, 'g'=> 125, 'd'=>113, 'f'=>11];
 $desifruits= ["Mango", "Lemon", "Banana", "Jackfruits", "JADU"];
 
+$num= [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
+function square($n){
+    printf("The square of %d is %d \n", $n, $n*$n*$n);
+}
 
-$common= array_diff_assoc($number1, $number2);
-print_r($common);
+$mywalk= array_walk($num,'square');
+echo $mywalk;
 
