@@ -1,17 +1,16 @@
 <?php  
-//Array merge()
-$vegetable= ['Data', 'shak','pui', 'alu','kaca','sukna moris', 'peyaj'];
-$fruits= ['Mango', 'Bedena', 'Kola', 'Jackfruits'];
+//type of sort function
 
-$part1=array_slice($vegetable,0,3,true);
-$part2=array_slice($vegetable,3,null,true);
-$part3= array("k"=>"vutto", "j"=>"nutt");
-
-$merged= $part2+$part3;
-print_r($merged);
+$abol=["Apple", "Bannana","Cadbium","jackfruit","pineapple","abogoda","JADU",'Jadu' ,"ciege"];
+$numbers= [12,33,2,234,34,32,1,11,33,22,555,3,4,5];
+$knumber= ['a'=>10, 'd'=> 15, 'c'=>12, 'f'=>11];
 
 
+asort($abol, SORT_STRING|SORT_FLAG_CASE);
+
+foreach($abol as $fruits){
+    echo $fruits. "\n";
+}
 
 
-$preserved= $part1+ $part2;
-//print_r($preserved);
+
