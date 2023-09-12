@@ -9,7 +9,9 @@ $desifruits= ["mango", "Lemon", "Banana", "Jackfruits", "JADU","manno", "manus",
 
 //list function of array
 
-$field=['fname','lname','email', 'meessage'];
-
-list($fn, $ln, $mail, $msn) = ['fname','lname','email', 'meessage'];
-echo $fn;
+$n= range(10,20,2);
+foreach (range(10,20) as $num) {
+    if($num%2==0){
+        echo "This is eben $num \n";
+    }
+}
