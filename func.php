@@ -8,10 +8,16 @@ $number2= ['d'=>110, 'g'=> 125, 'd'=>113, 'f'=>11];
 $desifruits= ["mango", "Lemon", "Banana", "Jackfruits", "JADU","manno", "manus", "Mama"];
 
 //list function of array
+ $n= range(01,50);
+$rn=mt_rand(5,10);
+$mynum= $n[$rn];
 
-$n= range(10,20,2);
-foreach (range(10,20) as $num) {
-    if($num%2==0){
-        echo "This is eben $num \n";
-    }
+if($mynum%2==0){
+    echo "Head";
+}else{
+    echo "Tail";
 }
+
+
+
+
