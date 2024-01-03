@@ -1,9 +1,17 @@
 <?php
-// check the leap year
-$year = 1700;
-if($year%400==0||($year%4==0 && $year%100!=0)){
-    echo "$year is a leap year";
-    }
-    else{
-        echo "$year is not a leap year";
+// check the switch case statement ;
+// switch case statement is used to check the condition
+$man="amijanina";
+switch ($man){
+    case "sagor":
+        echo "This is sagor ahmed";
+        break;
+    case "sharif":
+        echo " hey this is sharif shorkar";
+        break;
+    case "taskia":
+        echo " Hey taskia";
+        break;
+    default:
+        echo "kew  e na so bye bye";
 }
