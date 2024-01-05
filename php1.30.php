@@ -1,12 +1,13 @@
 <?php
-//check factorial 5! = 5*4*3*2*1
-$f=10;
-for($i=1,$fac=1; $i<=$f; $i++){
-    $fac*=$i;
+
+$vold=0;
+$old=1;
+$n=1;
+for ($i=0; $i<10; $i++){
+    echo $vold." ";
+    $n=$vold+$old;
+    $vold=$old;
+    $old=$n;
 }
-
-echo " the factorila of {$f} is $fac";
-
-
 
 
