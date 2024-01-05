@@ -1,14 +1,11 @@
 <?php
-//For Loop
-/*
-for ($i=0,$j=10; $i<10 && $j>0; $i++,$j--){
-    echo $i." ". $j."\n";
+//check factorial 5! = 5*4*3*2*1
+$f=10;
+for($i=1,$fac=1; $i<=$f; $i++){
+    $fac*=$i;
 }
-*/
 
-for ($i=15,$j=0; $j<15; $i--,$j++){
-    echo $i.":". $j."<br>";
-}
+echo " the factorila of {$f} is $fac";
 
 
 
