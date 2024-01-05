@@ -1,27 +1,14 @@
 <?php
 //For Loop
-
-for($i=0; $i<=20; $i+=2){
-    echo $i."<br>";
+/*
+for ($i=0,$j=10; $i<10 && $j>0; $i++,$j--){
+    echo $i." ". $j."\n";
 }
-echo PHP_EOL;
-echo "<br>";
+*/
 
-$i=0;
-while($i<=10){
-    $i++;
-    echo "$i"."<br>";
+for ($i=15,$j=0; $j<15; $i--,$j++){
+    echo $i.":". $j."<br>";
 }
-echo "<br>";
-
-
-$i=0;
-do{
-    $i++;
-    echo $i."<br>";
-}
-while($i<10);
-
 
 
 
