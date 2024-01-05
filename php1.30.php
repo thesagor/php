@@ -1,19 +1,26 @@
 <?php
-//alternate syntex
-$num=200520;
-if($num%2==0):
-    echo " hey this is Even number";
-    echo PHP_EOL. "<br>";
-    if($num%400==0 || ($num%4==0 && $num%100 != 0)):
-        echo " Hey this is Leap year also";
-    else: echo " Hey its not leap year";
-    endif;
+//For Loop
 
-else:
-    echo " hey this is Odd number";
-endif;
+for($i=0; $i<=20; $i+=2){
+    echo $i."<br>";
+}
+echo PHP_EOL;
+echo "<br>";
+
+$i=0;
+while($i<=10){
+    $i++;
+    echo "$i"."<br>";
+}
+echo "<br>";
 
 
+$i=0;
+do{
+    $i++;
+    echo $i."<br>";
+}
+while($i<10);
 
 
 
