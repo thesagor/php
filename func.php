@@ -21,13 +21,78 @@ function daoyat($poramanik, $samsu){
 function sumfixed(int $x,int $y,int $z):int {
     return $x+$y+$z;
 }
-function sum(int ...$numbers):int {
+function sum(int $x,int $y,int ...$numbers):int {
     $result=0;
     foreach($numbers as $num){
         $result+=$num;
     }
-    return $result;
+    return $x+$y+$result;
 }
+
+
+function printN($x)
+{
+    if($x>100) {
+        return;
+    }
+    echo $x. "\n";
+    $x++;
+    printN($x);
+
+}
+
+
+function sumofTwoNum($x,$y){
+    if($x>$y){
+        return;
+    }
+    $x++;
+    return $x+sumofTwoNum($x,$y);
+
+}
+
+
+
+//recursion function
+ function stend($x, $y, $step){
+    if($x>$y){
+        return;
+    }
+    echo $x."\n";
+    $x+=$step;
+    stend($x,$y,$step);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
