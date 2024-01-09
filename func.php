@@ -63,6 +63,30 @@ function sumofTwoNum($x,$y){
     stend($x,$y,$step);
  }
 
+ //make factorial number with recursion
+function factor($n)
+{
+    if($n==1 || $n<=0) {
+        return 1;
+    }
+   return $n*(factor($n-1));
+}
+
+function fibonassi($vold,$old,$newn,$end){
+    if($newn>$end){
+        return;
+    }
+    $vold++;
+    echo "$vold". "\n";
+    $_temp=$vold+$old;
+    $old=$vold;
+    $newn=$_temp;
+    fibonassi($vold,$old,$newn,$end);
+
+}
+
+
+
 
 
 

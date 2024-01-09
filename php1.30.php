@@ -2,4 +2,4 @@
 include_once "func.php";
 
 
-stend(10,20,3);
+fibonassi(0,1,1,10);
