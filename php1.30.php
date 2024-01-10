@@ -2,4 +2,13 @@
 include_once "func.php";
 
 
-fibonassi(0,1,1,10);
+
+function variable(){
+    global $name;
+    $name= "Saagor";
+}
+
+
+
+
+
