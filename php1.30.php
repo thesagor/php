@@ -4,9 +4,16 @@ include_once "func.php";
 
 
 function variable(){
-    global $name;
-    $name= "Saagor";
+    static $i;
+    $i=$i??0;
+    $i++;
+    echo $i;
+    echo "\n";
+
 }
+variable();
+variable();
+variable();
 
 
 
