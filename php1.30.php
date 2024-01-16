@@ -1,20 +1,11 @@
 <?php
 include_once "func.php";
 
-
-
-function variable(){
-    static $i;
-    $i=$i??0;
-    $i++;
-    echo $i;
-    echo "\n";
-
+function facti($x)
+{
+    return $x*facti($x-1);
 }
-variable();
-variable();
-variable();
-
+echo facti(5);
 
 
 
