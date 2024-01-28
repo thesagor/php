@@ -1,11 +1,17 @@
 <?php
-include_once "func.php";
+//learning array
 
-function facti($x)
-{
-    return $x*facti($x-1);
+$students=[
+    'ashik',
+    'bacchu',
+    'cacchu',
+    'hayder',
+    'nain'
+];
+$n=count($students);
+for($i=$n-1; $i>=0; $i--){
+    echo strtoupper($students[$i]). "<br>";
 }
-echo facti(5);
 
 
 
