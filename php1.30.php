@@ -1,18 +1,29 @@
 <?php
 //learning array
+// multi dimentional array
 
-//ARRAY REDUCE
+$pusti= explode(', ', 'alu,begun,moric,jol');
+$vitaminA= explode(', ', 'lal shak, pepe, am, dhela mas');
 
-$number= [0,1,2,3,4,5,6,7];
+$name= explode('+ ', 'rofikul+ rasel+ babu+ sagor');
 
-function suma($old,$new){
-    if($new%2==0) {
-        return $old + $new;
-    }
-    return $old;
-}
-$mainsum= array_reduce($number,'suma');
-echo $mainsum;
+//print_r($name);
+
+
+$gusti= [
+    'mokter'=>[
+        'rofiqul'=>['sijad', 'enti'],
+        'rasel'=>['raisa', 'boltu'],
+        'babu'=>[' karim', 'biva'],
+        'sagor'=>['null']
+    ]
+] ;
+
+$newvalue= 'bronti bushra';
+
+array_push($gusti['mokter']['rofiqul'], $newvalue);
+
+print_r($gusti['mokter']['rofiqul']);
 
 
 
