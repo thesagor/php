@@ -19,11 +19,20 @@ $gusti= [
     ]
 ] ;
 
-$newvalue= 'bronti bushra';
 
-array_push($gusti['mokter']['rofiqul'], $newvalue);
 
-print_r($gusti['mokter']['rofiqul']);
+$exmple= [
+    'name'=>'Sagor Ahmed',
+    'age'=> 23,
+    'class'=>9,
+    'home'=>'Bhangura',
+    'roll'=>10
+];
 
+$convert= serialize($exmple);
+print_r($convert);
+echo PHP_EOL;
+$convertdecode= unserialize($convert);
+print_r($convertdecode);
 
 
