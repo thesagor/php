@@ -1,38 +1,24 @@
 <?php
 //learning array
-// multi dimentional array
+//shallow copy and deep copy
 
-$pusti= explode(', ', 'alu,begun,moric,jol');
-$vitaminA= explode(', ', 'lal shak, pepe, am, dhela mas');
-
-$name= explode('+ ', 'rofikul+ rasel+ babu+ sagor');
-
-//print_r($name);
-
-
-$gusti= [
-    'mokter'=>[
-        'rofiqul'=>['sijad', 'enti'],
-        'rasel'=>['raisa', 'boltu'],
-        'babu'=>[' karim', 'biva'],
-        'sagor'=>['null']
-    ]
-] ;
-
-
-
-$exmple= [
-    'name'=>'Sagor Ahmed',
-    'age'=> 23,
-    'class'=>9,
-    'home'=>'Bhangura',
-    'roll'=>10
+$number=[
+    'a'=>100,
+    'b'=>500,
+    'z'=>250,
+    'd'=>300,
+    'e'=>350
 ];
+$case=[
+    'a'=>'hellow',
+    'c'=>'Hai',
+    'b'=>'world'
+];
+asort($case, SORT_STRING | SORT_FLAG_CASE);
+asort($number);
+print_r($case);
+print_r($number);
 
-$convert= serialize($exmple);
-print_r($convert);
-echo PHP_EOL;
-$convertdecode= unserialize($convert);
-print_r($convertdecode);
+
 
 
