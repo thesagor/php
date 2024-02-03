@@ -1,6 +1,14 @@
 <?php
 //learning array
-//
-foreach(range(0,20,2) as $evennumber){
-    echo $evennumber."\n";
+//random number
+$number= range(40,80);
+shuffle($number);
+$rand= $number[5];
+
+if($rand%2== 0){
+    echo "Head";
+}else{
+    echo "Tail";
 }
+
+
