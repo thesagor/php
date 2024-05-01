@@ -1,15 +1,15 @@
 <?php
 //learning array
 //random number
-$number= range(40,80);
-shuffle($number);
-$rand= $number[5];
+$numbers= range(10,40);
+$random= mt_rand(0,25);
+/*//print_r($numbers);
 
-if($rand%2== 0){
+//$n=count($numbers);
+//print_r($n);
+//print_r($random);*/
+if($random%2==1){
     echo "Head";
 }else{
     echo "Tail";
 }
-//testing
-
-
