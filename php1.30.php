@@ -1,15 +1,6 @@
 <?php
-//learning array
-//random number
-$numbers= range(10,40);
-$random= mt_rand(0,25);
-/*//print_r($numbers);
+//array rand
+$rand=array("a"=>"Dhaka","b"=>"Rajshahi","c"=>"Khulna","d"=>"Barishal","e"=>"Chittagong","f"=>"Sylhet");
+$result= array_rand($rand);
 
-//$n=count($numbers);
-//print_r($n);
-//print_r($random);*/
-if($random%2==1){
-    echo "Head";
-}else{
-    echo "Tail";
-}
+echo $rand[$result];
