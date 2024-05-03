@@ -9,7 +9,7 @@
 </head>
 <body>
     <h3>Name is : <?php echo $_GET['name'] ?></h3>
-    <h3>Name is : <?php echo $_GET['name'] ?></h3>
+    <h3>Mail is : <?php echo $_GET['mail'] ?></h3>
 
 </body>
 </html>
