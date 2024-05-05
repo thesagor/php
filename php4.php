@@ -27,18 +27,23 @@
                 <?php
                     $name= '';
                     $mail= '';
+                    $check= '';
 
+                    if ( !empty(htmlspecialchars($_REQUEST['name']))){
+                        $name= htmlspecialchars($_REQUEST['name']);}
+
+                    if ( !empty($_REQUEST['mail'])){
+                    $mail=htmlspecialchars($_REQUEST['mail']);}
+
+                    if ( !empty($_REQUEST['check'])==1){
+                    $check="checked";}
                 ?>
 
 
-                <h3>Name is : <?php if ( !empty(htmlspecialchars($_REQUEST['name']))){
-                    echo $name= htmlspecialchars($_REQUEST['name']);}  ?></h3>
+                <h3>Name is : <?php echo $name;  ?></h3>
 
-                <h3>Mail is : <?php if ( !empty($_REQUEST['mail'])){
-                    $mail=$_REQUEST['mail'];
-                        echo htmlspecialchars($mail);
+                <h3>Mail is : <?php  echo $mail;   ?></h3>
 
-                }  ?></h3>
 
 
                 <form action="" method="POST">
@@ -47,6 +52,8 @@
 
                     <label for="email">Email:</label>
                     <input type="email" name="mail" value="<?php echo $mail;?>">
+                    <input type="checkbox" name="check" <?php echo $check;?>>
+                    <label for="checkbox" id="check" class="label-inline" >I am agree with you</label><br>
 
                     <button type="submit" name="submit" id="submit">submit</button>
                 </form>
