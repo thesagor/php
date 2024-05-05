@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
+<?php include_once "func.php"; ?>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -52,8 +54,18 @@
 
                     <label for="email">Email:</label>
                     <input type="email" name="mail" value="<?php echo $mail;?>">
-                    <input type="checkbox" name="check" <?php echo $check;?>>
-                    <label for="checkbox" id="check" class="label-inline" >I am agree with you</label><br>
+
+
+                    <label for="fruits">Select some fruits</label>
+                    <input type="checkbox" name="fruits[]" value="mango" <?php echo checked('fruits', 'mango')?>>
+                    <label for="mango" class="label-inline">mango</label>
+                    <input type="checkbox" name="fruits[]" value="graps" <?php echo checked('fruits', 'graps')?>>
+                    <label for="graps" class="label-inline">graps</label>
+                    <input type="checkbox" name="fruits[]" value="pineapple" <?php echo checked('fruits','pineapple') ?>>
+                    <label for="pineapple" class="label-inline">pineapple</label>
+                    <input type="checkbox" name="fruits[]" value="banana" <?php echo checked('fruits','banana') ?>>
+                    <label for="banana" class="label-inline">Banana</label>
+
 
                     <button type="submit" name="submit" id="submit">submit</button>
                 </form>
