@@ -18,17 +18,29 @@
     </style>
 </head>
 <body>
+
     <div class="container">
         <div class="row">
             <div class="column column-60 column-offset-20">
                 <h3>Our first form</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dignissimos dolore ea eaque eligendi iste neque quibusdam quisquam tempora voluptas?</p>
-                <form action="index.php" method="GET">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name">
+                <?php
+                    $name= '';
+                    $mail= '';
 
-                    <label for="email">Name:</label>
-                    <input type="email" name="mail">
+                ?>
+
+
+                <h3>Name is : <?php if (isset($_REQUEST['name']) && !empty($_REQUEST['name'])){ echo $name= $_REQUEST['name'];}  ?></h3>
+                <h3>Mail is : <?php if (isset($_REQUEST['mail']) && !empty($_REQUEST['mail'])){ echo $mail=$_REQUEST['mail'];}  ?></h3>
+
+
+                <form action="" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="<?php echo $name;?>">
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="mail" value="<?php echo $mail;?>">
 
                     <button type="submit" name="submit" id="submit">submit</button>
                 </form>
