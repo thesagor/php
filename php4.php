@@ -31,8 +31,14 @@
                 ?>
 
 
-                <h3>Name is : <?php if ( !empty($_REQUEST['name'])){ echo $name= $_REQUEST['name'];}  ?></h3>
-                <h3>Mail is : <?php if ( !empty($_REQUEST['mail'])){ echo $mail=$_REQUEST['mail'];}  ?></h3>
+                <h3>Name is : <?php if ( !empty(htmlspecialchars($_REQUEST['name']))){
+                    echo $name= htmlspecialchars($_REQUEST['name']);}  ?></h3>
+
+                <h3>Mail is : <?php if ( !empty($_REQUEST['mail'])){
+                    $mail=$_REQUEST['mail'];
+                        echo htmlspecialchars($mail);
+
+                }  ?></h3>
 
 
                 <form action="" method="POST">
