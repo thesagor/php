@@ -31,7 +31,7 @@
                     $mail= '';
                     $check= '';
 
-                    if ( !empty(htmlspecialchars($_REQUEST['name']))){
+                    if ( !empty($_REQUEST['name'])){
                         $name= htmlspecialchars($_REQUEST['name']);}
 
                     if ( !empty($_REQUEST['mail'])){
@@ -57,13 +57,13 @@
 
 
                     <label for="fruits">Select some fruits</label>
-                    <input type="checkbox" name="fruits[]" value="mango" <?php echo checked('fruits', 'mango')?>>
+                    <input type="checkbox" name="fruits[]" value="mango" <?php  fruitsChecked( 'mango')?>>
                     <label for="mango" class="label-inline">mango</label>
-                    <input type="checkbox" name="fruits[]" value="graps" <?php echo checked('fruits', 'graps')?>>
+                    <input type="checkbox" name="fruits[]" value="graps" <?php  fruitsChecked('graps')?>>
                     <label for="graps" class="label-inline">graps</label>
-                    <input type="checkbox" name="fruits[]" value="pineapple" <?php echo checked('fruits','pineapple') ?>>
+                    <input type="checkbox" name="fruits[]" value="pineapple" <?php  fruitsChecked('pineapple') ?>>
                     <label for="pineapple" class="label-inline">pineapple</label>
-                    <input type="checkbox" name="fruits[]" value="banana" <?php echo checked('fruits','banana') ?>>
+                    <input type="checkbox" name="fruits[]" value="banana" <?php  fruitsChecked('banana') ?>>
                     <label for="banana" class="label-inline">Banana</label>
 
 
