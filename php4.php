@@ -1,3 +1,11 @@
+<?php
+    if (isset($_FILES['photo']) && !empty($_FILES['photo']) && $_FILES['photo']['type'] == 'image/png'){
+        move_uploaded_file($_FILES['photo']['tmp_name'], "files/". $_FILES['photo']['name']);
+    }
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <?php include_once "func.php"; ?>
@@ -43,28 +51,30 @@
 
 
                 <h3>Name is : <?php echo $name;  ?></h3>
-
                 <h3>Mail is : <?php  echo $mail;   ?></h3>
 
+                <pre>
+                    <p>
+                        <?php print_r($_REQUEST);
+                        print_r($_FILES);
+
+                        ?>
+                    </p>
+                </pre>
 
 
-                <form action="" method="POST">
+
+                <form action="" method="POST" enctype="multipart/form-data">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" value="<?php echo $name;?>">
 
                     <label for="email">Email:</label>
                     <input type="email" name="mail" value="<?php echo $mail;?>">
 
+                    <label for="photo">Upload photo</label>
+                    <input type="file" name="photo" id="NID">
 
-                    <label for="fruits">Select some fruits</label>
-                    <input type="checkbox" name="fruits[]" value="mango" <?php  fruitsChecked( 'mango')?>>
-                    <label for="mango" class="label-inline">mango</label>
-                    <input type="checkbox" name="fruits[]" value="graps" <?php  fruitsChecked('graps')?>>
-                    <label for="graps" class="label-inline">graps</label>
-                    <input type="checkbox" name="fruits[]" value="pineapple" <?php  fruitsChecked('pineapple') ?>>
-                    <label for="pineapple" class="label-inline">pineapple</label>
-                    <input type="checkbox" name="fruits[]" value="banana" <?php  fruitsChecked('banana') ?>>
-                    <label for="banana" class="label-inline">Banana</label>
+
 
 
                     <button type="submit" name="submit" id="submit">submit</button>
