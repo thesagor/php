@@ -1,6 +1,7 @@
 <?php
     if (isset($_FILES['photo']) && !empty($_FILES['photo']) && $_FILES['photo']['type'] == 'image/png'){
         move_uploaded_file($_FILES['photo']['tmp_name'], "files/". $_FILES['photo']['name']);
+        $imagefile = basename($_FILES['photo']['name']);
     }
 
 
@@ -34,6 +35,7 @@
             <div class="column column-60 column-offset-20">
                 <h3>Our first form</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dignissimos dolore ea eaque eligendi iste neque quibusdam quisquam tempora voluptas?</p>
+                <div class="image"><img src="files/<?php printf($imagefile);?>" alt=""></div>
                 <?php
                     $name= '';
                     $mail= '';
