@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="inc/style.css">
 
     <title>Document</title>
     <style>
@@ -35,7 +36,6 @@
             <div class="column column-60 column-offset-20">
                 <h3>Our first form</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dignissimos dolore ea eaque eligendi iste neque quibusdam quisquam tempora voluptas?</p>
-                <div class="image"><img src="files/<?php printf($imagefile);?>" alt=""></div>
                 <?php
                     $name= '';
                     $mail= '';
@@ -43,28 +43,9 @@
 
                     if ( !empty($_REQUEST['name'])){
                         $name= htmlspecialchars($_REQUEST['name']);}
-
                     if ( !empty($_REQUEST['mail'])){
                     $mail=htmlspecialchars($_REQUEST['mail']);}
-
-                    if ( !empty($_REQUEST['check'])==1){
-                    $check="checked";}
                 ?>
-
-
-                <h3>Name is : <?php echo $name;  ?></h3>
-                <h3>Mail is : <?php  echo $mail;   ?></h3>
-
-                <pre>
-                    <p>
-                        <?php print_r($_REQUEST);
-                        print_r($_FILES);
-
-                        ?>
-                    </p>
-                </pre>
-
-
 
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label for="name">Name:</label>
@@ -76,11 +57,19 @@
                     <label for="photo">Upload photo</label>
                     <input type="file" name="photo" id="NID">
 
-
-
-
                     <button type="submit" name="submit" id="submit">submit</button>
                 </form>
+
+
+                <div class="id" id="card">
+                    <div class="image"><img src="files/<?php printf($imagefile);?>" alt=""></div>
+                    <h3>Name is : <?php echo $name;  ?></h3>
+                    <h3>Mail is : <?php  echo $mail;  ?></h3>
+                </div>
+
+
+
+
             </div>
         </div>
     </div>

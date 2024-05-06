@@ -1,0 +1,16 @@
+div#card {
+    color: #fff;
+    background: #bbb9c9;
+    padding: 100px 50px;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto';
+    width: max-content;
+    border-radius: 10px;
+    /* text-align: left; */
+    /* justify-content: left; */
+}
