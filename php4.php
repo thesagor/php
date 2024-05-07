@@ -1,8 +1,14 @@
 <?php
-    if (isset($_FILES['photo']) && !empty($_FILES['photo']) && $_FILES['photo']['type'] == 'image/png'){
-        move_uploaded_file($_FILES['photo']['tmp_name'], "files/". $_FILES['photo']['name']);
-        $imagefile = basename($_FILES['photo']['name']);
+    $phnum= count($_FILES['photo']['name']);
+    for ($i=0; $i<$phnum; $i++){
+        if (isset($_FILES['photo']['name'][$i])){
+            move_uploaded_file($_FILES['photo']['tmp_name'][$i], "files/". $_FILES['photo']['name'][$i]);
+
+            //$imagefile = basename($_FILES['photo']['name']);
+        }
+
     }
+
 
 
 ?>
@@ -47,6 +53,14 @@
                     $mail=htmlspecialchars($_REQUEST['mail']);}
                 ?>
 
+                <pre>
+                    <?php print_r($_FILES);
+                        print_r($phnum);
+
+                    ?>
+
+                </pre>
+
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" value="<?php echo $name;?>">
@@ -55,17 +69,19 @@
                     <input type="email" name="mail" value="<?php echo $mail;?>">
 
                     <label for="photo">Upload photo</label>
-                    <input type="file" name="photo" id="NID">
+                    <input type="file" name="photo[]" id="NID">
+                    <input type="file" name="photo[]" id="NID2">
+                    <input type="file" name="photo[]" id="NID3">
 
                     <button type="submit" name="submit" id="submit">submit</button>
                 </form>
 
 
-                <div class="id" id="card">
-                    <div class="image"><img src="files/<?php printf($imagefile);?>" alt=""></div>
-                    <h3>Name is : <?php echo $name;  ?></h3>
-                    <h3>Mail is : <?php  echo $mail;  ?></h3>
-                </div>
+                <!--<div class="id" id="card">
+                    <div class="image"><img src="files/<?php /*printf($imagefile);*/?>" alt=""></div>
+                    <h3>Name is : <?php /*echo $name;  */?></h3>
+                    <h3>Mail is : <?php /* echo $mail;  */?></h3>
+                </div>-->
 
 
 
