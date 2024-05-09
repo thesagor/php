@@ -1,8 +1,9 @@
 <?php
     $string= "Hello world";
+    $lenth= strlen($string);
 
-    echo $string[3];
-    echo PHP_EOL;
-    echo strrev($string);
+    for ($i=$lenth-1; $i>=0; $i--){
+        echo $string[$i];
+    }
 
 ?>
