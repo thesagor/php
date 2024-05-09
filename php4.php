@@ -1,9 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 <?php
-    $string= "Hello world";
-    $lenth= strlen($string);
+//data scrumbler project where has encode decode key generate button
 
-    for ($i=$lenth-1; $i>=0; $i--){
-        echo $string[$i];
-    }
+//for loop
+
+//foreach loop
+
 
 ?>
+
+
+</body>
+</html>
