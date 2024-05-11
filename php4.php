@@ -2,10 +2,11 @@
 //data scrumbler project where has encode decode key generate button
 //for loop
 
-$details = "Harun arrosid male 01780884888";
-sscanf($details, "%s %s %s %d", $fname, $lname, $gender, $num);
+$hexcode = "#ff2bad";
+$test = sscanf($hexcode, "#%2x%2x%2x", $red, $green, $blue);
+echo $red;
 
-print_r($num);
+
 
 
 
