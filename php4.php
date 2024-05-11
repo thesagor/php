@@ -2,16 +2,10 @@
 //data scrumbler project where has encode decode key generate button
 //for loop
 
-$string = " A quick brown fox jump over the lazy dogs";
-$replace = str_replace(["fox", "dog"], ["tiger", "goat"], $string, $gonek);
+$details = "Harun arrosid male 01780884888";
+sscanf($details, "%s %s %s %d", $fname, $lname, $gender, $num);
 
-print_r($replace);
-echo PHP_EOL;
-echo $gonek;
-
-
-
-
+print_r($num);
 
 
 
