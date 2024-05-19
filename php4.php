@@ -1,11 +1,14 @@
 <?php
-//data scrumbler project where has encode decode key generate button
-//for loop
+//data read
 
-$hexcode = "#ff2bad";
-$test = sscanf($hexcode, "#%2x%2x%2x", $red, $green, $blue);
-echo $red;
-?>
+$data = 'C:/Users/User/Desktop/php/inc/info.txt';
+$fo = fopen($data, "r+");
+$fgets = fgets($fo);
+
+echo "$fgets";
+fclose($fo);
+
+
 
 
 
