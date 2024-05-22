@@ -1,7 +1,6 @@
 saturday
 sunday
 monday
-tuesday
 wednesday
 thursday
-Friday
+Fridayextraday

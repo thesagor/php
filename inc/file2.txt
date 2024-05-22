@@ -7,3 +7,6 @@ navakump
 Plito
 neptun
 navakump
+Plito
+neptun
+navakump

@@ -1,15 +1,14 @@
 <?php
 //data read
-$data = 'C:/Users/User/Desktop/php/inc/file2.txt';
+$data = 'C:/Users/User/Desktop/php/inc/info.txt';
+$fo = fopen($data, "a+");
 
-$fo = fopen($data, "a");
-fwrite($fo, "Plito\n");
-fwrite($fo, "neptun\n");
-fwrite($fo, "navakump\n");
+$fchek = fgets($fo);
+echo $fchek;
+rewind($fo);
 
 
-fclose($fo);
-
+fwrite($fo, "extraday");
 
 
 
