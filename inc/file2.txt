@@ -4,3 +4,6 @@ earth
 Plito
 neptun
 navakump
+Plito
+neptun
+navakump
