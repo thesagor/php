@@ -41,17 +41,14 @@ while ($data = fgetcsv($myhandle)) {
     printf('Name: %s, Age: %d, Course: %s, Year: %d', $data[0], $data[1], $data[2], $data[3]);
 }*/
 
+$handle = fopen($data, 'w+');
+foreach ($students as $student) {
+    fputcsv($handle, $student);
+}
+fclose($handle);
 
-//The new student data
-$extraStudent = array(
-    'name' => 'New Student',
-    'age' => 24,
-    'course' => 'BSCS',
-    'year' => 1
-);
-$exstudent = fopen($data, 'a+');
-fputcsv($exstudent, $extraStudent);
-fclose($exstudent);
+
+
 
 
 

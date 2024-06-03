@@ -2,4 +2,3 @@
 "Jane Adam",21,BSIT,4
 "Juan Dela Cruz",22,BSIS,2
 "Pedro Penduko",23,BSHRM,1
-"New Student",24,BSCS,1
