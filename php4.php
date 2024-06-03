@@ -30,12 +30,32 @@ $students = array(
     )
 );
 
-$handle = fopen($data, 'w');
+
+/*$handle = fopen($data, 'w');
 foreach ($students as $student) {
-    //fputcsv($handle, $student);
-    fwrite($handle, $student['name'] . ', ' . $student['age'] . ',' . $student['course'] . ',' . $student['year'] . "\n");
-}
-fclose($handle);
+    fputcsv($handle, $student);
+}*/
+
+/*$myhandle = fopen($data, 'r');
+while ($data = fgetcsv($myhandle)) {
+    printf('Name: %s, Age: %d, Course: %s, Year: %d', $data[0], $data[1], $data[2], $data[3]);
+}*/
+
+
+//The new student data
+$extraStudent = array(
+    'name' => 'New Student',
+    'age' => 24,
+    'course' => 'BSCS',
+    'year' => 1
+);
+$exstudent = fopen($data, 'a+');
+fputcsv($exstudent, $extraStudent);
+fclose($exstudent);
+
+
+
+
 
 
 
