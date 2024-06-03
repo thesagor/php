@@ -1,0 +1,4 @@
+John Doe,20,BSCS,3
+Jane Adam,21,BSIT,4
+Juan Dela Cruz,22,BSIS,2
+Pedro Penduko,23,BSHRM,1
