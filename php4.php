@@ -31,16 +31,6 @@ $students = array(
 );
 
 
-/*$handle = fopen($data, 'w');
-foreach ($students as $student) {
-    fputcsv($handle, $student);
-}*/
-
-/*$myhandle = fopen($data, 'r');
-while ($data = fgetcsv($myhandle)) {
-    printf('Name: %s, Age: %d, Course: %s, Year: %d', $data[0], $data[1], $data[2], $data[3]);
-}*/
-
 $handle = fopen($data, 'w+');
 foreach ($students as $student) {
     fputcsv($handle, $student);
