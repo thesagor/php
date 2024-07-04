@@ -31,27 +31,30 @@ $students = array(
 );
 
 
-$handle = fopen($data, 'w+');
-foreach ($students as $student) {
-    fputcsv($handle, $student);
+function tastia($name, $age)
+{
+    echo " mY name is taslkia. How can i help you";
+    array(
+        'name' => "ahmed niaz",
+        'age' => 20,
+        'villa' => "chowbaria"
+    );
 }
-fclose($handle);
 
+?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
+<body>
+<ol>
+    <li></li>
+</ol>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
