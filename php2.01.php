@@ -3,3 +3,4 @@
 include_once "func.php";
 
 echo "Hello World!";
+echo "<br>";
