@@ -21,9 +21,15 @@ $facebook = [
     'phone' => '01558447'
 ];
 
-$CEO = [$microsoft, $tesla, $facebook];
+$ceo = [$microsoft, $tesla, $facebook];
+foreach ($ceo as $company) {
+    foreach ($company as $com => $person) {
+        echo "$com => $person \n ";
+    }
+    echo "Group is over \n \n";
+}
 
-print_r($CEO[0]['name']);
+
 
 
 
