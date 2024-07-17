@@ -26,7 +26,7 @@ foreach ($ceo as $company) {
     foreach ($company as $com => $person) {
         echo "$com => $person \n ";
     }
-    echo "Group is over \n \n";
+    echo "Group is over \n \n \n";
 }
 
 
