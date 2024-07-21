@@ -5,12 +5,5 @@ $string = "I'm Sagor ahmed, we are lorem30 and try to work from home.Butt we hav
 
 $lenth = strlen($string);
 
-$wordexplode = explode(" ", $string);
-$wcount = count($wordexplode);
-echo $wcount . "\n ";
-$charge = ($wcount - 5) * 5;
-echo $charge;
-
-$charged = $charge / 5;
-echo PHP_EOL;
-echo $charged;
+$substr = substr($string, -15, -10);
+echo $substr;
