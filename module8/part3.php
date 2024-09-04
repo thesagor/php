@@ -13,11 +13,7 @@ class abba
 
 class saoyal extends abba
 {
-    public function motsompod()
-    {
-        $mot = $this->sompod + $this->ma;
-        echo "mot sompad = " . $mot;
-    }
+    public $sompod = 2000;
 }
 
 $som = new saoyal();
