@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\sessionController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\siteController;
@@ -10,8 +11,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/test', [siteController::class, 'test'])->middleware(testMiddleware::class);
-
-Route::middleware('throttle:2,1')->group(function () {
-    Route::get('/', [siteController::class, 'index']);
-});
+Route::get('flash', [sessionController::class, 'setflash']);
+Route::view('gotflash', 'session');
