@@ -8,14 +8,7 @@ class siteController extends Controller
 {
     function homePage()
     {
-        $student = [
-            ['name' => 'Rahim', 'age' => 25],
-            ['name' => 'Karim', 'age' => 26],
-            ['name' => 'Jabbar', 'age' => 27],
-            ['name' => 'Salim', 'age' => 28],
-            ['name' => 'Kamal', 'age' => 29]
-        ];
-        return view('pages.home', ['students' => $student]);
+        return view('pages.home');
     }
 
     function aboutPage()

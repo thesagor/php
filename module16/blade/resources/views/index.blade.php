@@ -10,16 +10,26 @@
 </head>
 <body>
 
-<h1>This is blade template engine</h1>
-<div>
-    <h2>My name is</h2>
-    <p>
-        My age is
-        <b>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, recusandae!
-        </b>
-    </p>
-</div>
+<form action="" method="POST">
+    @csrf
+    <label for="name">name</label>
+    <input type="text" name="name" placeholder="name">
+    @error('name')
+    <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+
+    <label for="email">email</label>
+    <input type="text" name="email" placeholder="email">
+    @error('email')
+    <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+    <label for="password">password</label>
+    <input type="text" name="password" placeholder="password">
+    @error('password')
+    <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+    <button type="submit">submit</button>
+</form>
 
 
 </body>

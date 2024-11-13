@@ -21,4 +21,9 @@ class ProfileController extends Controller
 
         return response()->json($data, 200)->cookie($cookie);
     }
+
+    function test()
+    {
+
+    }
 }

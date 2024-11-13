@@ -1,30 +1,30 @@
 <?php
 
-abstract class  abba
+final class  abba
 {
-    public $taka = 50000;
-    public $jomi = 10000;
-
-    function abbarsompotti()
+    function __construct()
     {
         for ($i = 1; $i <= 10; $i++) {
-            print ($i . "\n");
+            print($i . "\n");
         }
-
     }
 }
 
 class son extends abba
 {
-    public function abbarsompotti()
+    /*function __construct()
     {
-        for ($i = 1; $i <= 5; $i++) {
+        parent::__construct();
+        for ($i = 1; $i <= 8; $i++) {
             print ($i . "\n");
         }
-
-    }
-
+    }*/
 }
 
 $sons = new son();
-$sons->abbarsompotti();
+
+function sitetrax($id, $num)
+{
+    echo $id . " " . $num;
+    printf("The id is %d and the num is %d", $id, $num);
+}

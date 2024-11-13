@@ -9,7 +9,6 @@ class sessionController extends Controller
     function setflash(Request $request)
     {
         $request->session()->flash('message', 'This is a flash message');
-        return redirect('gotflash');
     }
 
     function formvalidate(Request $request)

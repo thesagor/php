@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\helloController;
+use App\Http\Controllers\newController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::match(['get', 'post'], '/optional/{id?}', [newController::class, 'optional']);
+Route::get('/pages', [newController::class, 'page']);
 
-Route::get('/image', [helloController::class, 'myimage']);
-Route::get('/array/{name}/{nick}/{age}', [helloController::class, 'arrayWork']);
-Route::post('/json', [helloController::class, 'jbody']);
+

@@ -8,8 +8,9 @@ use App\Http\Middleware\testMiddleware;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+Route::post('/', [sessionController::class, 'formvalidate']);
 
 Route::get('flash', [sessionController::class, 'setflash']);
 Route::view('gotflash', 'session');

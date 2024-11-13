@@ -1,8 +1,8 @@
-<?php
-//string related issue
+- name: Sitetrax
+url: https://sitetrax.io
+- name: Hacker News
+url: https://news.ycombinator.com
+- name: Test Broken Site
+url: https://thissitedoesnotexist.koj.co
 
-//celcius to farrenhaight
 
-$celcius = 32;
-$farrenhaight = $celcius * 9 / 5 + 32;
-printf("The temperature in Fahrenheit is: %.2f", $farrenhaight);
