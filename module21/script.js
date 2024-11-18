@@ -15,11 +15,16 @@ let name = (a, b) => {
 }
 name(5, 6);*/
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let squareofnumbers = numbers.map((x) => {
-    return x * x;
-})
-let fileter = numbers.filter(() => {
-})
+const students = [
+  { name: "sajjad", age: 25 },
+  { name: "hasan", age: 22 },
+  { name: "sojib", age: 21 },
+  { name: "shuvo", age: 23 },
+  { name: "sajib", age: 24 },
+  { name: "hassan ali", age: 26 },
+  { name: "sajjad ali", age: 27 },
+];
 
+const filterstudent = students.filter((student) => student.age <= 25);
 
+console.log(filterstudent);
