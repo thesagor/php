@@ -15,7 +15,7 @@ let name = (a, b) => {
 }
 name(5, 6);*/
 
-const students = [
+/*const students = [
   { name: "sajjad", age: 25 },
   { name: "hasan", age: 22 },
   { name: "sojib", age: 21 },
@@ -27,4 +27,25 @@ const students = [
 
 const filterstudent = students.filter((student) => student.age <= 25);
 
-console.log(filterstudent);
+console.log(filterstudent);*/
+
+
+//deposit and withdraw
+const account = {
+    balance: 0,
+    deposit: function (amount) {
+        this.balance += amount;
+        console.log(`the balance is now ${this.balance}`)
+    },
+    witdraw: function (amount) {
+        if (this.balance >= amount) {
+            this.balance -= amount;
+        } else {
+            console.log("sorry you have insufficient balance")
+        }
+    }
+}
+account.deposit(200);
+account.witdraw(100);
+console.log(account.balance);
+
