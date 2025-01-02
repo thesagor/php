@@ -16,11 +16,11 @@ class indoMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
-        $query = $request->query('ID');
-        if ($query == 8088) {
+        $string = $request->query('ID');
+        if ($string == 'abc123') {
             return $next($request);
         } else {
-            return response()->json('aunthorised', 401);
+            return response('Access Denied', 403);
         }
     }
 }

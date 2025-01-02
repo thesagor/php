@@ -17,4 +17,42 @@ class myController extends Controller
         ];
         return $fruitlist;
     }
+
+    function info2(Request $request)
+    {
+        $fruitlist = [
+            'vitaminC' => 'orange',
+            'vitaminA' => 'carrot',
+            'vitaminB' => 'banana',
+            'vitaminD' => 'milk',
+            'vitaminE' => 'almond'
+        ];
+        return $fruitlist;
+    }
+
+    function info3(Request $request)
+    {
+        $fruitlist = [
+            'vitaminC' => 'orange',
+            'vitaminA' => 'carrot',
+            'vitaminB' => 'banana',
+            'vitaminD' => 'milk',
+            'vitaminE' => 'almond'
+        ];
+        return $fruitlist;
+    }
+
+    function info4(Request $request)
+    {
+        $fruitlist = [
+            'vitaminC' => 'orange',
+            'vitaminA' => 'carrot',
+            'vitaminB' => 'banana',
+            'vitaminD' => 'milk',
+            'vitaminE' => 'almond'
+        ];
+        return $fruitlist;
+    }
+
+
 }

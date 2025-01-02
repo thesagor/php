@@ -15,6 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->validateCsrfTokens(except: [
             '*', // disable CSRF token validation for all routes
         ]);
+
+        //enable middleware
+        //$middleware->append(['App\Http\Middleware\indoMiddleware::class']);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
