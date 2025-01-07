@@ -3,5 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module21/part2/b4-js-functions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module22/js" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module23/vue" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/oop" vcs="Git" />
   </component>
 </project>

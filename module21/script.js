@@ -39,6 +39,7 @@ const account = {
     },
     witdraw: function (amount) {
         if (this.balance >= amount) {
+            amount
             this.balance -= amount;
         } else {
             console.log("sorry you have insufficient balance")

@@ -2,18 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\myController;
-use App\Http\Middleware\indoMiddleware;
+use App\Http\Middleware\verMiddleware;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('info', [myController::class, 'info'])->middleware([indoMiddleware::class]);
-//Route::get('info2', [myController::class, 'info2']);
-//Route::get('info3', [myController::class, 'info3']);
-//Route::get('info4', [myController::class, 'info4']);
+Route::get('/check', [myController::class, 'check'])->middleware([verMiddleware::class]);
 
-Route::middleware([indoMiddleware::class])->group(function () {
-    Route::get('info2', [myController::class, 'info2']);
-    Route::get('info3', [myController::class, 'info3']);
-    Route::get('info4', [myController::class, 'info4']);
-});
+//add group middleware
+/*Route::middleware(['info'])->group(function () {
+    Route::get('/info', [myController::class, 'info']);
+});*/
+
+
+

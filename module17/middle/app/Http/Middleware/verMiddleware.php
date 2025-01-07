@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class indoMiddleware
+class verMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,12 +15,10 @@ class indoMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-
-        $string = $request->query('ID');
-        if ($string == 'abc123') {
+        $version = $request->query('ID');
+        if ($version == 1122) {
             return $next($request);
-        } else {
-            return response('Access Denied', 403);
         }
+        return response()->json(['message' => 'You are not authorized to access this page from middleware'], 401);
     }
 }

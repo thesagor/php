@@ -6,53 +6,20 @@ use Illuminate\Http\Request;
 
 class myController extends Controller
 {
-    function info(Request $request)
+    public function info()
     {
-        $fruitlist = [
-            'vitaminC' => 'orange',
-            'vitaminA' => 'carrot',
-            'vitaminB' => 'banana',
-            'vitaminD' => 'milk',
-            'vitaminE' => 'almond'
+        $fruits = [
+            'vitamin A' => 'apple',
+            'vitamin B' => 'banana',
+            'vitamin C' => 'orange',
+            'vitamin D' => 'grape',
+            'vitamin E' => 'kiwi'
         ];
-        return $fruitlist;
+        return $fruits;
     }
 
-    function info2(Request $request)
+    public function check()
     {
-        $fruitlist = [
-            'vitaminC' => 'orange',
-            'vitaminA' => 'carrot',
-            'vitaminB' => 'banana',
-            'vitaminD' => 'milk',
-            'vitaminE' => 'almond'
-        ];
-        return $fruitlist;
+        return response()->json(['message' => 'You are authorized to access this page from controller'], 200);
     }
-
-    function info3(Request $request)
-    {
-        $fruitlist = [
-            'vitaminC' => 'orange',
-            'vitaminA' => 'carrot',
-            'vitaminB' => 'banana',
-            'vitaminD' => 'milk',
-            'vitaminE' => 'almond'
-        ];
-        return $fruitlist;
-    }
-
-    function info4(Request $request)
-    {
-        $fruitlist = [
-            'vitaminC' => 'orange',
-            'vitaminA' => 'carrot',
-            'vitaminB' => 'banana',
-            'vitaminD' => 'milk',
-            'vitaminE' => 'almond'
-        ];
-        return $fruitlist;
-    }
-
-
 }
