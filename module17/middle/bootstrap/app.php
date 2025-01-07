@@ -15,6 +15,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->validateCsrfTokens(except: [
             '*', // disable CSRF token validation for all routes
         ]);
+        $middleware->throttleApi('5,1');
+
 
         //enable middleware
         //$middleware->append(['App\Http\Middleware\indoMiddleware::class']);

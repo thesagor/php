@@ -9,6 +9,8 @@ Route::get('/', function () {
 });
 Route::get('/check', [myController::class, 'check'])->middleware([verMiddleware::class]);
 
+Route::get('/info', [MyController::class, 'info'])->middleware('throttle:5,1');
+
 //add group middleware
 /*Route::middleware(['info'])->group(function () {
     Route::get('/info', [myController::class, 'info']);
