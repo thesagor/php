@@ -1,38 +1,222 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My First Web Pagesss</title>
-    <style>
-      h1 {
-        color: rgb(6, 6, 75);
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>We’ll be back soon | Maintenance</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0ea5e9">
+  <!-- Auto-refresh once per minute so users get the site back ASAP -->
+  <meta http-equiv="refresh" content="60">
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f172a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --brand: #38bdf8;   /* sky-400 */
+      --brand-strong: #0ea5e9; /* sky-500 */
+      --ok: #22c55e;
+      --shadow: 0 10px 20px rgba(2, 6, 23, 0.35);
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f3f4f6;
+        --panel: #ffffff;
+        --text: #0f172a;
+        --muted: #4b5563;
+        --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
       }
-      p {
-        color: green;
-      }
-      li {
-        color: red;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Welcome to My Web Pagssssse!</h1>
-    <p>This is a simple HTML page.</p>
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(56, 189, 248, .12), transparent 60%),
+                  radial-gradient(1000px 700px at 100% 0%, rgba(14, 165, 233, .10), transparent 50%),
+                  var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    main {
+      width: min(720px, 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)) padding-box,
+                  linear-gradient(180deg, rgba(56,189,248,0.35), rgba(14,165,233,0.2)) border-box;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 4vw, 36px);
+      backdrop-filter: blur(8px) saturate(125%);
+    }
+    .top {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      background: rgba(56, 189, 248, 0.10);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+    h1 {
+      margin: 8px 0 12px;
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    p.lead {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: clamp(15px, 2.6vw, 17px);
+    }
+    .meta {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr;
+      margin: 16px 0 22px;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(148, 163, 184, 0.08);
+      border: 1px dashed rgba(148, 163, 184, 0.35);
+      font-size: 14px;
+    }
+    .meta strong { color: var(--text); }
 
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      -webkit-tap-highlight-color: transparent;
+      appearance: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      color: white;
+      background: linear-gradient(180deg, var(--brand), var(--brand-strong));
+      box-shadow: 0 6px 18px rgba(14,165,233, .35);
+    }
+    .btn-primary:focus-visible { outline: 2px solid var(--brand-strong); outline-offset: 2px; }
+    .btn-outline {
+      color: var(--text);
+      border-color: rgba(148, 163, 184, 0.35);
+      background: transparent;
+    }
 
-    <details>
-      <summary>Click to expand</summary>
-      <p>Here is some more information.</p>
-    </details>
-    <ol>
-      <lo>orange</lo>
-      <li>apple</li>
-      <li>banana</li>
-      <li>pine apple</li>
-    </ol>
-  </body>
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .icon {
+      width: 28px; height: 28px; flex: 0 0 28px;
+      color: var(--brand-strong);
+    }
+
+    @media (max-width: 520px) {
+      .top { align-items: flex-start; }
+      .badge { font-size: 13px; }
+      .actions { width: 100%; }
+      .btn { flex: 1 1 auto; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main role="main" aria-labelledby="title">
+    <div class="top">
+      <!-- Inline SVG icon (wrench/gear) -->
+      <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21 13.5a7.5 7.5 0 0 1-9.9 7.1l-4.9 4.9-3.2-3.2 4.9-4.9A7.5 7.5 0 1 1 21 13.5Z" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M8.2 13.8a3 3 0 1 0 4.24-4.24 3 3 0 0 0-4.24 4.24Z" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span class="badge" aria-live="polite" aria-atomic="true">
+        Scheduled maintenance • <span id="countdown" title="Auto-refresh countdown">Refreshing in 60s</span>
+      </span>
+    </div>
+
+    <h1 id="title">We’ll be back soon</h1>
+    <p class="lead">
+      We’re performing a brief upgrade to keep things fast and secure. Most maintenance completes within 15–30 minutes.
+    </p>
+
+    <div class="meta" role="status" aria-live="polite" aria-atomic="true">
+      <div>
+        <strong>Current status:</strong> Offline for maintenance (HTTP 503 recommended at server level)
+      </div>
+      <div>
+        <strong>Last checked:</strong> <time id="lastUpdated">—</time>
+      </div>
+      <div>
+        <strong>Next try:</strong> This page refreshes automatically, but you can also retry manually.
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="retryBtn" type="button" aria-label="Try loading the site again">Try again</button>
+      <a class="btn btn-outline" href="https://status.example.com" target="_blank" rel="noopener" aria-label="Check live service status">View status</a>
+      <a class="btn btn-outline" href="mailto:support@example.com?subject=Support%20request%20during%20maintenance" aria-label="Email support">Email support</a>
+    </div>
+
+    <p class="footer">
+      Thanks for your patience. If this persists longer than expected, please check the status page or contact support.
+    </p>
+  </main>
+
+  <script>
+    (function () {
+      var seconds = 60;
+      var el = document.getElementById('countdown');
+      var lastUpdated = document.getElementById('lastUpdated');
+      var retry = document.getElementById('retryBtn');
+
+      function fmt(n) { return n + 's'; }
+      function tick() {
+        seconds -= 1;
+        if (seconds <= 0) {
+          location.reload();
+          return;
+        }
+        if (el) el.textContent = 'Refreshing in ' + fmt(seconds);
+      }
+
+      function updateTime() {
+        try {
+          var now = new Date();
+          var opts = { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+          lastUpdated.textContent = now.toLocaleString(undefined, opts);
+        } catch (e) {
+          lastUpdated.textContent = new Date().toISOString();
+        }
+      }
+
+      if (retry) retry.addEventListener('click', function () { location.reload(); });
+      if (el) el.textContent = 'Refreshing in ' + fmt(seconds);
+      updateTime();
+      setInterval(updateTime, 1000);
+
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion) setInterval(tick, 1000);
+    })();
+  </script>
+</body>
 </html>
